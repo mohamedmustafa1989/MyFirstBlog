@@ -1,0 +1,11 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+  {% if post.date_published %}
+    <p>This post is published on: {{post.date_published}}</p>
+  {% else %}
+    <p>This post is not published yet</p>
+  {% endif %}
+
+  <p>Text:</p>
+  <p>{{post.text}}</p>
+{% endblock %}
